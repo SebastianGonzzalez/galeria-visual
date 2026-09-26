@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;       /* #0a0a0a */
+    --foreground: 40 20% 94%;    /* #f0ede8 */
+    --radius: 10px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+    /* No se bloquea el scroll acá a propósito: la página de la rueda
+       (src/app/page.tsx) ya pone su propio overflow-hidden en el <main>,
+       pero la vista de detalle en /obra/{id} sí necesita poder scrollear. */
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
