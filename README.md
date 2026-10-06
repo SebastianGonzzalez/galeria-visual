@@ -41,14 +41,14 @@ Está optimizada para funcionar como **sitio web estático**, lo que permite un 
 
 ## Características
 
-- 🎬 **Pantalla de carga personalizada** — introducción visual mediante `gallery-loading-screen.tsx`.
-- 🌀 **Presentación dinámica de obras** — experiencia interactiva con `image-stream-hero.tsx` y `works-wheel.tsx`.
-- 🖼️ **Página individual para cada obra** — cada pieza tiene su propia ruta dinámica: `/obra/[id]`.
-- 📱 **Diseño totalmente responsivo** — adaptado a móviles, tablets y escritorio.
-- 🎨 **Estilos modernos** con Tailwind CSS.
-- 🛡️ **TypeScript** con tipado estricto para mayor seguridad y mantenibilidad del código.
-- ⚡ **Generación estática** configurada con `output: 'export'`.
-- 🚀 **Despliegue automático** en GitHub Pages mediante GitHub Actions.
+-  **Pantalla de carga personalizada** — introducción visual mediante `gallery-loading-screen.tsx`.
+-  **Presentación dinámica de obras** — experiencia interactiva con `image-stream-hero.tsx` y `works-wheel.tsx`.
+-  **Página individual para cada obra** — cada pieza tiene su propia ruta dinámica: `/obra/[id]`.
+-  **Diseño totalmente responsivo** — adaptado a móviles, tablets y escritorio.
+-  **Estilos modernos** con Tailwind CSS.
+-  **TypeScript** con tipado estricto para mayor seguridad y mantenibilidad del código.
+-  **Generación estática** configurada con `output: 'export'`.
+-  **Despliegue automático** en GitHub Pages mediante GitHub Actions.
 
 ## Tecnologías
 
