@@ -1,227 +1,233 @@
-Galería Visual
+<div align="center">
 
-Una experiencia web interactiva, moderna y altamente visual para presentar arte, fotografía, diseño y proyectos creativos.
+# Galería Visual
 
-Galería Visual es una galería web diseñada para mostrar obras de forma atractiva e inmersiva, combinando animaciones fluidas, navegación intuitiva y páginas de detalle individuales para cada pieza.
+**Una experiencia web interactiva, moderna y altamente visual para presentar arte, fotografía, diseño y proyectos creativos.**
 
-El proyecto está optimizado para funcionar como un sitio web estático, permitiendo un despliegue rápido, sencillo y gratuito mediante GitHub Pages.
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://pages.github.com/)
 
-Características
+[![Deploy](https://github.com/TU-USUARIO/TU-REPOSITORIO/actions/workflows/deploy.yml/badge.svg)](https://github.com/TU-USUARIO/TU-REPOSITORIO/actions/workflows/deploy.yml)
 
-Pantalla de carga personalizada
-Introducción visual mediante gallery-loading-screen.tsx.
+[**Ver demo**](https://TU-USUARIO.github.io/TU-REPOSITORIO/) · [Reportar un problema](https://github.com/TU-USUARIO/TU-REPOSITORIO/issues)
 
-Presentación dinámica de obras
-Experiencia interactiva mediante componentes como image-stream-hero.tsx y works-wheel.tsx.
+</div>
 
-Páginas individuales para cada obra
-Cada pieza cuenta con su propia ruta dinámica:
+<!-- Vista previa: guarda una captura en public/preview.png y quita el comentario de la línea siguiente -->
+<!-- ![Vista previa de Galería Visual](public/preview.png) -->
 
-/obra/[id]
+---
 
+## Acerca del proyecto
 
-Diseño totalmente responsivo
-Adaptado para dispositivos móviles, tablets y ordenadores.
+**Galería Visual** es una galería web diseñada para mostrar obras de forma atractiva e inmersiva, combinando animaciones fluidas, navegación intuitiva y páginas de detalle individuales para cada pieza.
 
-Estilos modernos con Tailwind CSS
+Está optimizada para funcionar como **sitio web estático**, lo que permite un despliegue rápido, sencillo y gratuito con **GitHub Pages**.
 
-TypeScript
-Tipado estricto para mejorar la seguridad y mantenibilidad del código.
+## Contenido
 
-Despliegue automático
-Preparado para desplegarse en GitHub Pages mediante GitHub Actions.
+- [Características](#características)
+- [Tecnologías](#tecnologías)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Desarrollo local](#desarrollo-local)
+- [Personalizar la galería](#personalizar-la-galería)
+- [Despliegue en GitHub Pages](#despliegue-en-github-pages)
+- [Antes de desplegar](#antes-de-desplegar)
+- [Casos de uso](#casos-de-uso)
+- [Licencia](#licencia)
 
-Generación estática
-Configurado con output: 'export' para generar una versión estática del sitio.
+## Características
 
-Tecnologías utilizadas
-Tecnología	Uso
-Next.js	Framework principal
-React	Construcción de la interfaz
-TypeScript	Lenguaje y tipado
-Tailwind CSS	Diseño y estilos
-GitHub Actions	Automatización del despliegue
-GitHub Pages	Hosting del sitio
-Estructura del proyecto
+- 🎬 **Pantalla de carga personalizada** — introducción visual mediante `gallery-loading-screen.tsx`.
+- 🌀 **Presentación dinámica de obras** — experiencia interactiva con `image-stream-hero.tsx` y `works-wheel.tsx`.
+- 🖼️ **Página individual para cada obra** — cada pieza tiene su propia ruta dinámica: `/obra/[id]`.
+- 📱 **Diseño totalmente responsivo** — adaptado a móviles, tablets y escritorio.
+- 🎨 **Estilos modernos** con Tailwind CSS.
+- 🛡️ **TypeScript** con tipado estricto para mayor seguridad y mantenibilidad del código.
+- ⚡ **Generación estática** configurada con `output: 'export'`.
+- 🚀 **Despliegue automático** en GitHub Pages mediante GitHub Actions.
 
-La estructura principal del proyecto está organizada de la siguiente manera:
+## Tecnologías
 
+| Tecnología | Uso |
+| --- | --- |
+| [Next.js](https://nextjs.org/) | Framework principal |
+| [React](https://react.dev/) | Construcción de la interfaz |
+| [TypeScript](https://www.typescriptlang.org/) | Lenguaje y tipado |
+| [Tailwind CSS](https://tailwindcss.com/) | Diseño y estilos |
+| [GitHub Actions](https://github.com/features/actions) | Automatización del despliegue |
+| [GitHub Pages](https://pages.github.com/) | Hosting del sitio |
+
+## Estructura del proyecto
+
+```text
 galeria-visual-limpia/
-│
-├── src/
-│   ├── app/
-│   │   ├── page.tsx
-│   │   │   └── Página principal de la galería
-│   │   │
-│   │   └── obra/
-│   │       └── [id]/
-│   │           └── Página dinámica de cada obra
-│   │
-│   ├── components/
-│   │   └── ui/
-│   │       └── Componentes visuales de la interfaz
-│   │           ├── Hero
-│   │           ├── Works Wheel
-│   │           └── Loading Screen
-│   │
-│   ├── data/
-│   │   └── gallery-items.ts
-│   │       └── Información de las obras
-│   │
-│   └── lib/
-│       └── Utilidades generales
-│
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml
-│           └── Automatización del despliegue
-│
-├── next.config.mjs
-│   └── Configuración de Next.js
-│
+│       └── deploy.yml               # Automatización del despliegue
+├── public/
+│   └── images/                      # Imágenes de las obras
+├── src/
+│   ├── app/
+│   │   ├── page.tsx                 # Página principal de la galería
+│   │   └── obra/
+│   │       └── [id]/                # Página dinámica de cada obra
+│   ├── components/
+│   │   └── ui/                      # Componentes visuales de la interfaz
+│   │       ├── gallery-loading-screen.tsx
+│   │       ├── image-stream-hero.tsx
+│   │       └── works-wheel.tsx
+│   ├── data/
+│   │   └── gallery-items.ts         # Información de las obras
+│   └── lib/                         # Utilidades generales
+├── next.config.mjs                  # Configuración de Next.js
 └── package.json
+```
 
-Desarrollo local
-1. Clonar el repositorio
+## Desarrollo local
 
-Clona este repositorio en tu ordenador:
+### Requisitos
 
-git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+- [Node.js](https://nodejs.org/) (se recomienda la versión LTS)
+- npm
 
+### Instalación
 
-Luego entra en la carpeta del proyecto:
+1. **Clona el repositorio**
 
-cd galeria-visual-limpia
+   ```bash
+   git clone https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+   cd TU-REPOSITORIO
+   ```
 
-2. Instalar dependencias
+2. **Instala las dependencias**
 
-Asegúrate de tener Node.js instalado y ejecuta:
+   ```bash
+   npm install
+   ```
 
-npm install
+3. **Inicia el servidor de desarrollo**
 
-3. Iniciar el servidor de desarrollo
-npm run dev
+   ```bash
+   npm run dev
+   ```
 
-4. Abrir el proyecto
+4. **Abre el proyecto** en [http://localhost:3000](http://localhost:3000)
 
-Visita:
+### Scripts disponibles
 
-http://localhost:3000
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia el servidor de desarrollo |
+| `npm run build` | Genera la versión estática del sitio en la carpeta `out/` |
 
-Personalizar la galería
+## Personalizar la galería
 
-La información de las obras está centralizada en un único archivo, lo que permite modificar el contenido sin necesidad de cambiar los componentes visuales.
+Toda la información de las obras está centralizada en un único archivo, así que puedes cambiar el contenido **sin tocar los componentes visuales**.
 
-Archivo principal
+### Añadir o editar obras
 
-Dirígete a:
+Edita `src/data/gallery-items.ts` para añadir, modificar o eliminar obras:
 
-src/data/gallery-items.ts
-
-
-En este archivo puedes añadir, modificar o eliminar obras.
-
-Por ejemplo:
-
+```ts
 {
   id: "mi-obra",
   title: "Mi Obra",
   description: "Descripción de la obra",
-  image: "/images/mi-obra.jpg"
+  image: "/images/mi-obra.jpg",
 }
+```
 
+> [!NOTE]
+> La estructura exacta de cada objeto depende de los campos definidos actualmente en `gallery-items.ts`.
 
-La estructura exacta de cada objeto dependerá de los campos definidos actualmente en gallery-items.ts.
+### Añadir imágenes
 
-Añadir imágenes
+Guarda las imágenes dentro de la carpeta pública del proyecto:
 
-Puedes almacenar las imágenes dentro de la carpeta pública del proyecto:
-
+```text
 public/
 └── images/
     ├── obra-1.jpg
     ├── obra-2.jpg
     └── obra-3.jpg
+```
 
+Y referéncialas desde los datos de la galería:
 
-Después puedes referenciarlas desde los datos de la galería:
-
+```ts
 image: "/images/obra-1.jpg"
+```
 
+También puedes usar URLs externas válidas si la estructura de datos del proyecto lo permite.
 
-También puedes utilizar URLs externas válidas si la estructura de datos del proyecto lo permite.
+## Despliegue en GitHub Pages
 
-Despliegue en GitHub Pages
+El proyecto usa **GitHub Actions** para generar y publicar automáticamente la versión estática del sitio. El workflow está en `.github/workflows/deploy.yml` y Next.js está configurado con `output: 'export'` para producir los archivos estáticos.
 
-El proyecto está preparado para utilizar GitHub Actions y generar automáticamente la versión estática del sitio.
+```mermaid
+flowchart LR
+    A[Código] --> B[GitHub] --> C[GitHub Actions] --> D[Build de Next.js] --> E[Archivos estáticos] --> F[GitHub Pages]
+```
 
-El flujo de despliegue se encuentra en:
+### Activar GitHub Pages
 
-.github/workflows/deploy.yml
+1. Sube el código a tu repositorio en GitHub.
+2. Ve a **Settings → Pages**.
+3. En **Build and deployment → Source**, selecciona **GitHub Actions** (o la rama que publique tu workflow, si usa una como `gh-pages`).
+4. Cada vez que envíes cambios al repositorio, el workflow se ejecutará y publicará el sitio según los eventos configurados en `deploy.yml`.
 
+> [!IMPORTANT]
+> Si el sitio se publica en una subruta, como `https://TU-USUARIO.github.io/TU-REPOSITORIO/`, revisa `next.config.mjs`: normalmente hace falta definir `basePath` y desactivar la optimización de imágenes para la exportación estática.
 
-La configuración de Next.js utiliza:
+<details>
+<summary>Ver ejemplo de <code>next.config.mjs</code></summary>
 
-output: 'export'
+```js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  basePath: '/TU-REPOSITORIO',
+  images: { unoptimized: true },
+};
 
+export default nextConfig;
+```
 
-Esto permite generar los archivos estáticos necesarios para alojar la galería en GitHub Pages.
+</details>
 
-Flujo de despliegue
-Código
-   │
-   ▼
-GitHub
-   │
-   ▼
-GitHub Actions
-   │
-   ▼
-Build de Next.js
-   │
-   ▼
-Archivos estáticos
-   │
-   ▼
-GitHub Pages
+## Antes de desplegar
 
+- [ ] Revisa la configuración de `next.config.mjs`.
+- [ ] Comprueba las rutas de las imágenes (incluido el `basePath`, si lo usas).
+- [ ] Revisa el contenido de `src/data/gallery-items.ts`.
+- [ ] Verifica la configuración de GitHub Pages en el repositorio.
+- [ ] Revisa el workflow en `.github/workflows/deploy.yml`.
 
-Cada actualización enviada al repositorio puede activar automáticamente el proceso de despliegue.
+## Casos de uso
 
-Objetivo del proyecto
+Galería Visual ofrece una base moderna y flexible para crear experiencias digitales centradas en contenido visual. Puedes usarla para:
 
-El objetivo de Galería Visual es proporcionar una base moderna y flexible para crear experiencias digitales enfocadas en contenido visual.
+- Portafolios de artistas
+- Portafolios de fotografía
+- Proyectos de diseño
+- Galerías digitales
+- Portafolios profesionales
+- Proyectos creativos y personales
 
-Puede utilizarse como base para:
+## Licencia
 
-Portafolios de artistas
+Este proyecto puede usarse y modificarse según los términos de la licencia incluida en el repositorio. Consulta el archivo [`LICENSE`](LICENSE) para más detalles.
 
-Portafolios de fotografía
+<!-- Recordatorio: si el proyecto todavía no incluye una licencia, añade una antes de distribuirlo públicamente. -->
 
-Proyectos de diseño
+---
 
-Galerías digitales
+<div align="center">
 
-Portafolios profesionales
+[Volver arriba ↑](#galería-visual)
 
-Proyectos creativos y personales
-
-Notas
-
-Antes de desplegar el proyecto, revisa especialmente:
-
-La configuración de next.config.mjs.
-
-Las rutas de las imágenes.
-
-El contenido de src/data/gallery-items.ts.
-
-La configuración de GitHub Pages.
-
-El workflow ubicado en .github/workflows/deploy.yml.
-
-Licencia
-
-Este proyecto puede ser utilizado y modificado según los términos de la licencia incluida en el repositorio.
-
-Si el proyecto no incluye una licencia todavía, considera añadir una antes de distribuirlo públicamente.
+</div>
